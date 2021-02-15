@@ -35,7 +35,8 @@ db.connect()
 
 app.post('/new-post', (request, response) => {
     const requestBody = request.body;
-    response.status(200).send(requestBody);
+    //add pg promise db.none() call with insert
+    response.status(200).send('success');
 });
 
 //TODO: GET request
