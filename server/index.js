@@ -2,6 +2,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+
 app.listen(port, () => {
     console.log(`server listening at port ${port}`);
 });
@@ -33,3 +38,9 @@ app.use((request, response) => {
     response.status(404);
     response.send('<h1>404 error</h1><p>Sorry! That page couldn\'t be found.</p>');
 });
+
+app.post('/new_post', (request, response) => {
+
+});
+
+//TODO: GET request
