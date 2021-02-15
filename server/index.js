@@ -33,14 +33,15 @@ db.connect()
         console.log('ERROR:', error.message || error);
 });
 
+app.post('/new-post', (request, response) => {
+    const requestBody = request.body;
+    response.status(200).send(requestBody);
+});
+
+//TODO: GET request
+
 app.use((request, response) => {
     response.type('text/html');
     response.status(404);
     response.send('<h1>404 error</h1><p>Sorry! That page couldn\'t be found.</p>');
 });
-
-app.post('/new_post', (request, response) => {
-
-});
-
-//TODO: GET request
