@@ -17,7 +17,7 @@ require('dotenv').config();
 const connectionObj = {
     host: process.env.DB_HOST,
     port: 5432,
-    database: 'DailyThoughts',
+    database: 'daily_thoughts',
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     max: 20
