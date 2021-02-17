@@ -1,6 +1,8 @@
 # daily-thoughts
 A blog app made with React, Node, and Postgres.
 
+User Story: I can create a new user with a password.
+
 User Story: I can securely log on to view my collection of diary entries and to submit new entries.
 
 User Story: I can log off of my collection.
